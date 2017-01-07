@@ -1,0 +1,8 @@
+<% if medico_signed_in? %>
+    <h1>Nueva observación</h1>
+    
+    <%= render 'form' %>
+    
+    <%= link_to 'Regresar', paciente_observacions_path(@paciente), :class => "button small icon fa-arrow-left"%>
+    
+<% end %>

@@ -1,0 +1,48 @@
+
+    <div class="row">
+        <div class="8u 12u(small)">
+            <h1>Buscar un médico</h1>
+        </div> 
+        <div class="4u$ 12u$(small)">
+            <%= link_to 'Lista de médicos', medicos_path  , :class => "button special small fit icon fa-list"%>
+        </div>   
+    </div> 
+
+<%= form_tag  "/buscarmedico/create", :method => :get, :remote => true do %>
+    
+    <div class="row">
+        <div class="8u 12u(small)">
+            <%= text_field_tag :keyword, nil, :placeholder => "Buscar médico" %>
+        </div> 
+        <div class="4u$ 12u$(small)">
+            <%= content_tag :button, :type => "submit", :class => "button special small fit icon fa-search" do%>
+                Buscar
+            <%end%>
+        </div>   
+    </div> 
+<% end %>
+
+<hr/>
+
+</ul>
+
+<div class="table-wrapper">
+ <table class="alt">
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Cédula</th>
+        <th>Nombre</th>
+        <th colspan="1"></th> 
+      </tr>
+    </thead>
+  
+    <tbody class="resultados">
+        
+    </tbody>
+ </table>
+ 
+ <%= link_to 'Regresar', :back, :class => "button small icon fa-arrow-left"%>
+ 
+</div>
+

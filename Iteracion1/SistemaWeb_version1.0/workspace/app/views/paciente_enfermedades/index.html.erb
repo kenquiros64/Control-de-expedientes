@@ -1,0 +1,42 @@
+  <p id="notice"><%= notice %></p>
+  
+  <div class="row">
+          <div class="8u 12u(small)">
+              <h1>Lista de enfermedades</h1>
+          </div> 
+          <div class="4u$ 12u$(small)">
+            <%= link_to 'Agregar enfermedad', new_paciente_enfermedad_path(@paciente), :class => "button special small fit icon fa-ambulance" %>
+          </div>   
+      </div> 
+      
+    <hr/>
+    
+   <h2>Paciente:<%= " " %> <%= @paciente.nombre %><%= " " %><%= @paciente.apellido1 %><%= " " %><%= @paciente.apellido2 %></h2>
+  <div class="table-wrapper">
+     <table class="alt">
+      <thead>
+        <tr>
+          <th>Codigo</th>
+          <th>Descripcion</th>
+          <th colspan="2"></th>
+        </tr>
+      </thead>
+    
+      <tbody>
+        <% @enfermedads.each do |enfermedad| %>
+          <tr>
+            <td><%= enfermedad.codigo %></td>
+            <td><%= enfermedad.descripcion %></td>
+            <td><%= link_to 'Mostrar', enfermedad, :class => "button small fit icon fa-file-text-o" %></td>
+            <td><%= link_to 'Eliminar',  paciente_enfermedad_path(@paciente, enfermedad), method: :delete, :class => "button special small fit icon fa-remove", :style => "background-color:#f56a6a;border-color:#f56a6a;" %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  
+  
+  <br/>
+  
+  <%= will_paginate @enfermedads, renderer: BootstrapPagination::Rails %>
+  

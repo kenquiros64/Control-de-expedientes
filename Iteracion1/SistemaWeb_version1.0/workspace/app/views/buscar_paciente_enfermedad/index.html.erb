@@ -1,0 +1,44 @@
+
+    <div class="row">
+        <div class="12u">
+            <h1>Búsqueda: Pacientes por enfermedad</h1>
+        </div> 
+    </div> 
+
+<%= form_tag  "/buscar_paciente_enfermedad/create", :method => :get, :remote => true do %>
+    
+    <div class="row">
+        <div class="8u">
+           <%= select_tag :id,  options_from_collection_for_select(@enfermedads, 'id', 'descripcion') %>
+        </div> 
+        <div class="4u$">
+            <%= content_tag :button, :type => "submit", :class => "button special small fit icon fa-search" do%>
+                Buscar
+            <%end%>
+        </div>   
+    </div> 
+<% end %>
+
+<hr/>
+
+</ul>
+
+<div class="table-wrapper">
+ <table class="alt">
+    <thead>
+      <tr>
+        <th>Cédula</th>
+        <th>Nombre</th>
+        <th colspan="3"></th> 
+      </tr>
+    </thead>
+  
+    <tbody class="resultados">
+        
+    </tbody>
+ </table>
+ 
+  <%= link_to 'Regresar', :back, :class => "button small icon fa-arrow-left"%>
+ 
+</div>
+

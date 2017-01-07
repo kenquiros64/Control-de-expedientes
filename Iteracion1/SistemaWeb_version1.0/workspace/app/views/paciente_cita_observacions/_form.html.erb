@@ -1,0 +1,22 @@
+<%= form_for([@paciente,@cita,@observacion]) do |f| %>
+  <% if @observacion.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@observacion.errors.count, "error") %> error al ingresar:</h2>
+
+      <ul>
+      <% @observacion.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :descripcion, "Descripción" %>
+    <%= f.text_area :descripcion, :placeholder => "Descripción" %>
+  </div>
+  <hr/>
+  <div class="actions">
+    <%= f.submit "Finalizar", :class => "button special" %>
+  </div>
+<% end %>

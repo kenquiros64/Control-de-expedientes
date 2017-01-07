@@ -1,0 +1,8 @@
+<% if medico_signed_in? %>
+    <h1>Nueva enfermedad</h1>
+    
+    <%= render 'form' %>
+    
+    <%= link_to 'Regresar', enfermedads_path, :class => "button small icon fa-arrow-left"%>
+    
+<% end %>

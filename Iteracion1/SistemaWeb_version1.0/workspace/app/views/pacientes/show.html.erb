@@ -1,0 +1,139 @@
+<% if medico_signed_in? %>
+    <p id="notice"><%= notice %></p>
+    <div class="row">
+        <div class="8u 12u(small)">
+            <h1>Información personal</h1>
+        </div> 
+        <div class="4u$ 12u$(small)">
+            <%= link_to 'Citas', paciente_cita_path(@paciente), :class => "button small fit special icon fa-file-text-o" %> 
+            <%= link_to 'Editar', edit_paciente_path(@paciente), :class => "button small fit special icon fa-edit" %> 
+        </div>   
+    </div> 
+    
+        <div class="row">
+          <div class="3u">
+            <span class="image fit"><%= image_tag(@paciente.image.url)  %></span>
+          </div> 
+          <div class="9u$">
+            <div class="field">
+              <header>
+                <h2>Nombre:</h2>
+                <p><%= @paciente.nombre %></p>
+              </header>
+            </div>
+            <div class="row">
+              <div class="6u">
+                <div class="field">
+                  <header>
+                   <h2>Primer apellido:</h2>
+                   <p><%= @paciente.apellido1 %></p>
+                  </header>
+                </div>
+              </div>
+              <div class="6u$">
+                <div class="field">
+                  <header>
+                    <h2>Segundo apellido:</h2>
+                    <p><%= @paciente.apellido2 %></p>
+                  </header>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+    <hr/>
+    
+    <header>
+        <h2>Cédula:</h2>
+         <p><%= @paciente.cedula %></p>
+    </header>
+    
+    <header>
+        <h2>Fecha de nacimiento:</h2>
+         <p><%= @paciente.fechaNacimiento %></p>
+    </header>
+    
+    <header>
+        <h2>Nacionalidad:</h2>
+         <p><%= @paciente.nacionalidad %></p>
+    </header>
+    
+    <header>
+        <h2>Sexo:</h2>
+         <p><%= @paciente.sexo %></p>
+    </header>
+    
+    
+    <header>
+        <h2>Fecha de fallecimiento:</h2>
+         <p><%= @paciente.fechaFallecimiento %></p>
+    </header>
+    <hr/>
+    
+    <h1>Teléfonos</h1>
+    
+    <header>
+        <% @telefonos.each do |telefono| %>
+            <ul class="actions" id= "telefono_<%= telefono.id %>">
+                <li><%= telefono.telefono %></li>
+                
+            </ul>
+            
+        <%end %>
+        
+    </header>
+    
+    <hr/>
+    
+    <h1>Correo</h1>
+    
+    <header>
+        <% @emails.each do |email| %>
+            <ul class="actions" id= "email_<%= email.id %>">
+                <li><%= email.email %></li>
+               
+            </ul>
+        <% end %>
+        
+    </header>
+    
+    <hr/>
+    
+    <div class="row">
+        <div class="8u">
+            <h1>Observaciones</h1>
+        </div> 
+        <div class="4u$">
+            <%= link_to 'Observaciones', paciente_observacions_path(@paciente), :class => "button small fit special icon fa-file-text-o" %> 
+        </div>   
+    </div> 
+    
+    <hr/>
+    
+     <div class="row">
+        <div class="8u">
+            <h1>Enfermedades</h1>
+        </div> 
+        <div class="4u$">
+            <%= link_to 'Enfermedades', paciente_enfermedads_path(@paciente), :class => "button small fit special icon fa-heart" %> 
+        </div>   
+    </div> 
+    
+    <header>
+        <% @enfermedads.each do |enfermedad| %>
+            <blockquote><%= enfermedad.descripcion %></blockquote>
+        <% end %>
+        
+    </header>
+    
+    <hr/>
+    
+
+    <h1>Eliminar paciente</h1>    
+    <div class="6u">
+        <%= link_to 'Eliminar', @paciente, method: :delete, :class => "button special fit icon fa-remove", :style => "background-color:#f56a6a;border-color:#f56a6a;", data: { confirm: 'Desea continuar?' } %>
+    </div>
+    
+    <%= link_to 'Regresar', :back, :class => "button small icon fa-arrow-left" %>
+<% end %>

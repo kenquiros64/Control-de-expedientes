@@ -1,0 +1,42 @@
+<p id="notice"><%= notice %></p>
+
+    <div class="row">
+        <div class="8u 12u(small)">
+            <h1>Lista de citas</h1>
+        </div> 
+        <div class="4u$ 12u$(small)">
+          <%= link_to 'Agregar cita', buscar_paciente_cita_index_path, :class => "button special small fit icon fa-file-text-o"%>
+        </div>   
+    </div> 
+
+<table class="alt">
+  <thead>
+    <tr>
+      <th>Fecha</th>
+      <th>Hora</th>
+      <th>Médico</th>
+      <th>Paciente</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @citas.each do |citum| %>
+      <tr>
+        <td><%= citum.fecha %></td>
+        <% t = citum.hora.to_datetime %>
+        <% @paciente = Paciente.find(citum.paciente_id) %>
+        <td><%= t.strftime("%H:%M") %></td>
+        <td><%= citum.medico.nombre %><%= " " %><%= citum.medico.apellido1 %><%= " " %><%= citum.medico.apellido2 %></td>
+        <td><%= @paciente.nombre %><%= " " %><%= @paciente.apellido1 %><%= " " %><%= @paciente.apellido2 %></td>
+        <td><%= link_to 'Mostrar', paciente_citum_path(@paciente, citum), :class => "button small fit icon fa-file-text-o"%></td>
+        <td><%= link_to 'Editar', edit_paciente_citum_path(@paciente, citum) , :class => "button small fit icon fa-edit"%></td>
+        <td><%= link_to 'Eliminar', paciente_citum_path(@paciente, citum), method: :delete, :class => "button special small fit icon fa-remove", :style => "background-color:#f56a6a;border-color:#f56a6a;", data: { confirm: 'Desea continuar?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+

@@ -1,0 +1,5 @@
+<% if @telefono.destroyed? %>
+  $('ul#telefono_<%= @telefono.id %>').fadeOut();
+<% else %>
+  #Do something
+<% end %>

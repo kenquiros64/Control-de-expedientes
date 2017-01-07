@@ -1,0 +1,26 @@
+<% if medico_signed_in? %>
+  <p id="notice"><%= notice %></p>
+  
+  <div class="row">
+        <div class="8u 12u(small)">
+            <h1>Información de la enfermedad</h1>
+        </div> 
+        <div class="4u$ 12u$(small)">
+            <%= link_to 'Editar', edit_enfermedad_path(@enfermedad), :class => "button small fit special icon fa-edit" %> 
+        </div>   
+    </div> 
+  
+  <hr/>
+  
+  <header>
+    <h2>Código:</h2>
+    <p><%= @enfermedad.codigo %></p>
+  </header>
+    
+  <header>
+    <h2>Descripción:</h2>
+    <p><%= @enfermedad.descripcion %></p>
+  </header>
+ 
+  <%= link_to 'Regresar', enfermedads_path(@enfermedad), :class => "button small icon fa-arrow-left" %>
+<% end %>

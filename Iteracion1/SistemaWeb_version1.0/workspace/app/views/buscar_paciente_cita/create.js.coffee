@@ -1,0 +1,1 @@
+$("tbody.pacientes").html("<%= j render 'cita', collection: @pacientes %>")

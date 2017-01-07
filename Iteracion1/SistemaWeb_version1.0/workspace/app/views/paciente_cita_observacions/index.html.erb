@@ -1,0 +1,44 @@
+
+  <p id="notice"><%= notice %></p>
+  
+  <div class="row">
+          <div class="8u 12u(small)">
+              <h1>Observaciones de la cita</h1>
+          </div> 
+          <div class="4u$ 12u$(small)">
+            <%= link_to 'Nueva observación', new_paciente_citum_observacion_path(@paciente,@cita), :class => "button special small fit icon fa-plus" %>
+          </div>   
+      </div> 
+      
+    <hr/>
+    
+  <h2>Paciente:<%= " " %> <%= @paciente.nombre %><%= " " %><%= @paciente.apellido1 %><%= " " %><%= @paciente.apellido2 %></h2>
+  <div class="table-wrapper">
+     <table class="alt">
+      <thead>
+        <tr>
+          <th>Médico</th>
+          <th>Fecha</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+    
+      <tbody>
+        <% @observacions.each do |observacion| %>
+          <tr>
+            <td><%= observacion.medico.nombre %><%= " " %><%= observacion.medico.apellido1 %><%= " " %><%= observacion.medico.apellido2 %></td>
+            <td><%= observacion.created_at %></td>
+            <td><%= link_to 'Mostrar', paciente_citum_observacion_path(@paciente,@cita,observacion), :class => "button small fit icon fa-file-text-o" %></td>
+            <td><%= link_to 'Editar', edit_paciente_citum_observacion_path(@paciente,@cita,observacion), :class => "button small fit icon fa-edit" %></td>
+            <td><%= link_to 'Eliminar',  paciente_citum_observacion_path(@paciente,@cita,observacion), method: :delete, :class => "button special small fit icon fa-remove", :style => "background-color:#f56a6a;border-color:#f56a6a;" %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  
+  <%= link_to 'Regresar', paciente_cita_path(@paciente), :class => "button small icon fa-arrow-left" %>
+  <br/>
+  
+  <%= will_paginate @observacions, renderer: BootstrapPagination::Rails %>
+  

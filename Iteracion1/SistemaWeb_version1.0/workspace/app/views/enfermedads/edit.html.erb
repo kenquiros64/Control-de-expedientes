@@ -1,0 +1,10 @@
+<% if medico_signed_in? %>
+
+    <h1>Editar enfermedad</h1>
+    
+    <%= render 'form' %>
+    
+    <%= link_to 'Mostrar', @enfermedad, :class => "button small" %> 
+    <%= link_to 'Regresar', :back, :class => "button small icon fa-arrow-left" %>
+
+<% end %>
