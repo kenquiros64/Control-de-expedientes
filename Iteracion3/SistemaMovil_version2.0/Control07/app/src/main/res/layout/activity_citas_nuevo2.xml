@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_citas_nuevo2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.example.ediloaz.control07.Citas.ActivityCitasNuevo2">
+
+    <include layout="@layout/dashboard"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
+            <!--Espacio en el top-->
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="50dp" />
+            <TextView
+                android:id="@+id/text_CitasNuevo2_title"
+                android:text="@string/text_CitasNuevo2_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="24sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="#737373"/>
+
+            <!--Paciente y médico-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                >
+                <LinearLayout
+                    android:layout_width="337dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:id="@+id/text_CitasNuevo2_Paciente"
+                        android:text="@string/text_CitasNuevo2_Paciente"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/text_CitasNuevo2_Paciente_answer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="337dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:id="@+id/text_CitasNuevo2_Medico"
+                        android:text="@string/text_CitasNuevo2_Medico"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/text_CitasNuevo2_Medico_answer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Fecha y hora-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                >
+                <LinearLayout
+                    android:layout_width="337dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:id="@+id/text_CitasNuevo2_date"
+                        android:text="Fecha"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/text_CitasNuevo2_date_answer"
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:textSize="18sp" />
+                    <Button
+                        android:id="@+id/button_CitasNuevo2_date"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Seleccionar fecha"
+                        android:onClick="datePicker"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentStart="true"
+                        android:textAllCaps="false"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="337dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:id="@+id/text_CitasNuevo2_Hora"
+                        android:text="Hora"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="66dp"
+                        android:inputType="time"
+                        android:ems="10"
+                        android:id="@+id/edit_CitasNuevo_time" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Botón de registrar-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:orientation="horizontal"
+                android:gravity="left">
+                <Button
+                    android:id="@+id/button_CitasNuevo2_Agregar"
+                    android:text="@string/button_form_registrar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    android:fontFamily="sans-serif"
+                    android:textSize="18sp" />
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleLarge"
+                    android:progressDrawable="@drawable/circular_progress_bar"
+                    android:layout_width="60dp"
+                    android:layout_height="49dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/progressBar"/>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

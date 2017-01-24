@@ -1,0 +1,11 @@
+<span class="image right">
+     <%= link_to 'Regresar', pacientes_path , :class => "button small icon fa-arrow-left"%>
+</span>
+<% if medico_signed_in? %>
+    <h1>Editar paciente</h1>
+    
+    <hr/>
+    
+    <%= render 'form' %>
+    
+<% end %>

@@ -1,0 +1,80 @@
+
+<% if medico_signed_in? %>
+    <p id="notice"><%= notice %></p>
+
+
+<span class="image right">
+    <%= link_to 'Regresar', medicos_path, :class => "button small icon fa-arrow-left" %>
+</span>
+
+
+<h1>Información personal</h1>
+
+ <hr/> 
+   
+    
+    <div class="row">
+          <div class="3u">
+            <span class="image fit"><img src="/assets/icon-user-default.png" alt=""></span>
+          </div> 
+          <div class="9u$">
+            <div class="field">
+              <header>
+                <h2>Nombre:</h2>
+                <p><%= @medico.nombre %></p>
+              </header>
+            </div>
+            <div class="row">
+              <div class="6u">
+                <div class="field">
+                  <header>
+                   <h2>Primer apellido:</h2>
+                   <p><%= @medico.apellido1 %></p>
+                  </header>
+                </div>
+              </div>
+              <div class="6u$">
+                <div class="field">
+                  <header>
+                    <h2>Segundo apellido:</h2>
+                    <p><%= @medico.apellido2 %></p>
+                  </header>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+    <hr/>
+    
+    <header>
+        <h2>Código:</h2>
+         <p><%= @medico.codigo %></p>
+    </header>
+    
+    <header>
+        <h2>Cédula:</h2>
+         <p><%= @medico.cedula %></p>
+    </header>
+    
+    <header>
+        <h2>Nacionalidad:</h2>
+         <p><%= @medico.nacionalidad %></p>
+    </header>
+    
+     <header>
+        <h2>Correo:</h2>
+         <p><%= @medico.email %></p>
+    </header>
+    
+    <header>
+        <h2>Estado:</h2>
+         <% if @medico.activo? %>
+             <p><%= "Inactivo" %></p>
+         <% else %>
+             <p><%= "Activo" %></p>
+         <% end %>
+    </header>
+   
+  
+<% end %>

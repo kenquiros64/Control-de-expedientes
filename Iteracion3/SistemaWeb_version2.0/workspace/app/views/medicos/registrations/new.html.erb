@@ -1,0 +1,91 @@
+<% if current_medico.has_role? :admin %>
+
+<span class="image right">
+   <%= link_to 'Regresar', medicos_path, :class => "button small icon fa-arrow-left" %>
+</span>
+
+  <h2>Nuevo médico</h2>
+  
+   <hr/> 
+  
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
+    
+    <section id="one">
+      <div class="row">
+        <div class="4u">
+          <span class="image fit"><img src="/assets/icon-user-default.png" alt=""></span>
+        </div> 
+        <div class="8u">
+          <div class="field">
+            <%= f.label :nombre, 'Nombre' %>
+            <%= f.text_field :nombre, :placeholder => "Nombre", :autofocus  => true %>
+          </div>
+          <div class="row">
+            <div class="6u">
+              <div class="field">
+                <%= f.text_field :apellido1, :placeholder => "Primer apellido" %>
+              </div>
+            </div>
+            <div class="6u$">
+              <div class="field">
+                <%= f.text_field :apellido2, :placeholder => "Segundo apellido"  %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br/>
+      
+      <div class="field">
+        <%= f.label :codigo ,'Código'%>
+        <%= f.text_field :codigo, :placeholder => "Código" %>
+      </div>
+      
+      <div class="field">
+        <%= f.label :cedula ,'Cédula'%>
+        <%= f.text_field :cedula, :placeholder => "Cédula 0-0000-0000" %>
+      </div>
+      
+      <div class="field">
+        <%= f.label :nacionalidad , 'Nacionalidad'%>
+        <%= f.select :nacionalidad, [ 'Costarricense','Costarricense naturalizado', 'Extranjero' ], :prompt => 'Nacionalidad', :id => "demo-category" %>
+      </div>
+      
+      <div class="field">
+          <%= f.check_box :activo%>
+          <%= f.label :activo , 'Inactivo'%>
+      </div>
+      
+    </section>
+    
+    <hr/>
+    
+    <h1>Datos de usuario</h1>
+    
+    <div class="field">
+      <%= f.label :email %>
+      <%= f.email_field :email, autofocus: true, :placeholder => "Email" %>
+    </div>
+  
+    <div class="field">
+      <%= f.label :password, "Contraseña" %>
+      <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> carácteres mínimos)</em>
+      <% end %>
+      <%= f.password_field :password, autocomplete: "off", :placeholder => "Contraseña" %>
+    </div>
+  
+    <div class="field">
+      <%= f.label :password_confirmation, "Confirmar contraseña" %>
+      <%= f.password_field :password_confirmation, autocomplete: "off", :placeholder => "Confirmación" %>
+    </div>
+    
+    <hr/>
+  
+    <div class="actions">
+      <%= f.submit "Registrar", :class => "button special" %>
+    </div>
+  <% end %>
+<% end %>
+

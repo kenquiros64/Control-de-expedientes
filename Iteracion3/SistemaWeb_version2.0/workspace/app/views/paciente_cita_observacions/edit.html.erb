@@ -1,0 +1,13 @@
+<% if medico_signed_in? %>
+
+    <span class="image right">
+        <%= link_to 'Regresar', paciente_citum_observacions_path(@paciente,@cita), :class => "button small icon fa-arrow-left"%>
+    </span>
+
+    <h1>Editar observación</h1>
+     <hr/> 
+    
+    <%= render 'form' %>
+    
+
+<% end %>

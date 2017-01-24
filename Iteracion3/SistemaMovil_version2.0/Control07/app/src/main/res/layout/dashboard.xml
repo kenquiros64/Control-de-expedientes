@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:background="#1F1815">
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="30dp"
+
+                android:background="#1F1815">
+            <!--Título de la aplicación-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center">
+                <ImageView
+                    android:id="@+id/dashboard_image_title"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/dashboard_title"/>
+                <TextView
+                    android:id="@+id/dashboard_text_title1"
+                    android:text="@string/text_dashboard_title1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFFFF"
+                    android:textAlignment="center"
+                    android:textSize="22sp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/dashboard_text_title2"
+                android:text="@string/text_dashboard_title2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#FFFFFF"
+                android:textAlignment="center"
+                android:textSize="28sp"
+                android:layout_marginBottom="50dp"/>
+
+
+            <!--Botón de pacientes-->
+            <Button
+                android:id="@+id/dashboard_Pacientes"
+                android:text="@string/button_dashboard_Pacientes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:fontFamily="sans-serif"
+                android:textSize="18sp"
+                android:background="@drawable/button_blue"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                tools:tag="#1F1815"
+                android:textColor="#FFFFFF" />
+            <!--Botón de médicos-->
+            <Button
+                android:id="@+id/dashboard_Medicos"
+                android:layout_width="match_parent"
+                android:text="@string/button_dashboard_Medicos"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:fontFamily="sans-serif"
+                android:textSize="18sp"
+                android:background="@drawable/button_blue"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:textColor="#FFFFFF" />
+
+            <!--Botón de enfermedades-->
+            <Button
+                android:id="@+id/dashboard_Enfermedades"
+                android:text="@string/button_dashboard_Enfermedades"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:fontFamily="sans-serif"
+                android:background="@drawable/button_blue"
+                android:textSize="18sp"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:textColor="#FFFFFF" />
+
+            <!--Botón de citas-->
+            <Button
+                android:id="@+id/dashboard_Citas"
+                android:text="@string/button_dashboard_Citas"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:fontFamily="sans-serif"
+                android:textSize="18sp"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:background="@drawable/button_blue"
+                android:textColor="#FFFFFF" />
+
+            <!--Botón de cerrar sesión-->
+            <Button
+                android:id="@+id/dashboard_LogOut"
+                android:text="@string/button_dashboard_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAllCaps="false"
+                android:fontFamily="sans-serif"
+                android:background="@drawable/button_black"
+                android:textSize="18sp"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:textColor="#FFFFFF" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>

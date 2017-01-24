@@ -1,0 +1,2 @@
+json.extract! paciente, :id, :cedula, :nombre, :apellido1, :apellido2, :fechaNacimiento, :nacionalidad, :genero, :fechaFallecimiento, :created_at, :updated_at
+json.url paciente_url(paciente, format: :json)

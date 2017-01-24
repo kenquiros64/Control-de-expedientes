@@ -1,0 +1,23 @@
+<%= form_for([@paciente,@enfermedad]) do |f| %>
+
+ <% if @enfermedad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@enfermedad.errors.count, "error") %> error al ingresar:</h2>
+
+      <ul>
+      <% @enfermedad.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+ 
+ <h3>Enfermedad</h3>
+  <section id="two">
+        <%= f.select :id,  options_from_collection_for_select(@enfermedads, 'id', 'descripcion') %>
+  </section>
+  <hr/>
+  <div class="actions">
+    <%= f.submit "Agregar", :class => "button special" %>
+  </div>
+<% end %>

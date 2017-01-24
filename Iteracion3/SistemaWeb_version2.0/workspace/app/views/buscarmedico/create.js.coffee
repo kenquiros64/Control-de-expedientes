@@ -1,0 +1,1 @@
+$("tbody.resultados").html("<%= j render @medicos %>")

@@ -1,0 +1,36 @@
+<% if medico_signed_in? %>
+  <p id="notice"><%= notice %></p>
+  
+  <span class="image right">
+     <%= link_to 'Regresar', paciente_citum_observacions_path(@paciente,@cita), :class => "button small icon fa-arrow-left" %>
+  </span>
+            
+  <h1>Detalles de la observación</h1>
+  
+    <div class="row">
+        <div class="4u 12u(small)">
+            <%= link_to 'Editar', edit_paciente_citum_observacion_path(@paciente,@cita,@observacion), :class => "button small fit special icon fa-edit" %> 
+        </div>   
+    </div> 
+    
+    <hr/>
+    
+   <h2>Paciente:<%= " " %> <%= @paciente.nombre %><%= " " %><%= @paciente.apellido1 %><%= " " %><%= @paciente.apellido2 %></h2>
+  
+   <header>
+    <h2>Médico:</h2>
+    <p><%= @observacion.medico.nombre %><%= " " %><%= @observacion.medico.apellido1 %><%= " " %><%= @observacion.medico.apellido2 %></p>
+  </header>
+  
+  <header>
+    <h2>Fecha:</h2>
+    <p><%= @observacion.created_at %></p>
+  </header>
+    
+  <header>
+    <h2>Descripción:</h2>
+    <blockquote><%= @observacion.descripcion %></blockquote>
+  </header>
+ 
+  
+<% end %>

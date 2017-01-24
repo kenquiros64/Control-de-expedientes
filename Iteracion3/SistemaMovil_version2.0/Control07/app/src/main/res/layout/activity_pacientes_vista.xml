@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_pacientes_vista"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.example.ediloaz.control07.Pacientes.ActivityPacientesVista">
+
+    <include layout="@layout/dashboard"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
+            <!--Título-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center">
+                <TextView
+                    android:id="@+id/text_PacientesVista_title"
+                    android:text="@string/text_PacientesVista_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30sp"
+                    android:textAlignment="center"
+                    android:layout_marginBottom="10dp"/>
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#737373" />
+            </LinearLayout>
+
+            <!--Formulario-->
+            <!--Imagen, fila #1 y fila #2-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="20dp">
+                <!--Imagen del paciente-->
+                <ImageView
+                    android:layout_width="130dp"
+                    android:layout_height="130dp"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/login_user"/>
+                <!--Fila #1 y fila #2-->
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:layout_marginRight="150dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_RegistrarPaciente_nombre"
+                        android:text="@string/text_form_complete_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp" />
+
+                    <LinearLayout
+                        android:layout_width="250dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:gravity="left">
+
+                        <TextView
+                            android:id="@+id/text_data_RegistrarPaciente_name"
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:textSize="18sp"
+                            android:layout_marginTop="@dimen/activity_vertical_margin"
+                            android:hint="Nombre"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal"
+                        >
+
+                        <!--Número de cedula-->
+                        <LinearLayout
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="@dimen/activity_vertical_margin"
+                            >
+                            <TextView
+                                android:id="@+id/text_RegistrarPaciente_ced_number"
+                                android:text="@string/text_form_ced_number"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp" />
+                            <TextView
+                                android:id="@+id/text_data_RegistrarPaciente_ced_number"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp"
+                                android:hint="0-0000-0000"/>
+                        </LinearLayout>
+
+                        <!--Nacionalidad-->
+                        <LinearLayout
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="@dimen/activity_vertical_margin"
+                            >
+                            <TextView
+                                android:id="@+id/text_RegistrarPaciente_nacionality"
+                                android:text="@string/text_form_nacionality"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp" />
+                            <TextView
+                                android:id="@+id/text_data_RegistrarPaciente_nacionality"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp"
+                                android:hint="0-0000-0000"/>
+                        </LinearLayout>
+
+                        <!--Fecha de nacimiento-->
+                        <LinearLayout
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="@dimen/activity_vertical_margin"
+                            >
+                            <TextView
+                                android:id="@+id/text_RegistrarPaciente_birthday_date"
+                                android:text="@string/text_form_birthday_date"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp" />
+                            <TextView
+                                android:id="@+id/text_data_RegistrarPaciente_birthday_date"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp"
+                                android:hint="0-0000-0000"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center_horizontal">
+
+                        <!--Género-->
+                        <LinearLayout
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="@dimen/activity_vertical_margin"
+                            >
+                            <TextView
+                                android:id="@+id/text_RegistrarPaciente_gender"
+                                android:text="@string/text_form_gender"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp" />
+                            <TextView
+                                android:id="@+id/text_data_RegistrarPaciente_gender"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp"
+                                android:hint="0-0000-0000"/>
+                        </LinearLayout>
+
+                        <!--Fecha fallecimiento-->
+                        <LinearLayout
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="@dimen/activity_vertical_margin"
+                            >
+                            <TextView
+                                android:id="@+id/text_RegistrarPaciente_death"
+                                android:text="@string/text_form_death"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp" />
+                            <TextView
+                                android:id="@+id/text_data_RegistrarPaciente_death"
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp"
+                                android:hint=""/>
+                        </LinearLayout>
+
+                        <!--Lista de correos electrónicos-->
+                        <LinearLayout
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="@dimen/activity_vertical_margin"
+                            >
+                            <TextView
+                                android:id="@+id/text_RegistrarPaciente_mails_list"
+                                android:text="@string/text_form_mails_list"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp" />
+                            <TextView
+                                android:id="@+id/text_data_RegistrarPaciente_mails_list"
+                                android:layout_width="340dp"
+                                android:layout_height="wrap_content"
+                                android:textSize="18sp"
+                                android:hint="0-0000-0000"/>
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_horizontal">
+
+                        <!--Columna de listas: Números, direcciones y enfermedades-->
+                        <LinearLayout
+                            android:layout_width="200dp"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_gravity="center_horizontal"
+                            >
+                            <!--Lista de números telefónicos-->
+                            <LinearLayout
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginTop="@dimen/activity_vertical_margin"
+                                >
+                                <TextView
+                                    android:id="@+id/text_RegistrarPaciente_numbers_list"
+                                    android:text="@string/text_form_numbers_list"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="18sp" />
+                                <TextView
+                                    android:id="@+id/text_data_RegistrarPaciente_numbers_list"
+                                    android:layout_width="200dp"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="18sp"
+                                    android:hint="0-0000-0000"/>
+                            </LinearLayout>
+
+
+
+                            <!--Lista de enfermedades-->
+                            <LinearLayout
+                                android:layout_width="200dp"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginTop="20dp">
+                                <TextView
+                                    android:id="@+id/text_RegistrarPaciente_diseases_list"
+                                    android:text="@string/text_form_diseases_list"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="18sp" />
+                                <Spinner
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:id="@+id/spinner_PacientesVista_diseases"
+                                    android:layout_weight="1"
+                                    android:textSize="18sp"
+                                    android:prompt="@string/country_prompt"/>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginTop="20dp">
+                                <TextView
+                                    android:id="@+id/text_Observacions_list"
+                                    android:text="@string/text_Observaciones_list"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textSize="18sp" />
+
+                                <Button
+                                    android:id="@+id/button_PacienteObservaciones"
+                                    android:background="@drawable/button_blue"
+                                    android:textColor="#FFFFFF"
+                                    android:text="@string/button_observaciones"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textAllCaps="false"
+                                    android:fontFamily="sans-serif"
+                                    android:textSize="18sp"
+                                    android:paddingLeft="10dp"
+                                    android:paddingRight="10dp" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!--Fila #3-->
+
+
+            <!--Fila #4, fila #5, fila #6 y botón de Registrar-->
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

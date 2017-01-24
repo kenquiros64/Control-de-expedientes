@@ -1,0 +1,135 @@
+<resources>
+    <string name="app_name">Control de expedientes</string>
+
+    <!--Login Activity-->
+    <string name="text_login_tittle">Ingresar</string>
+    <string name="text_login_user">Nombre de usuario</string>
+    <string name="text_login_pass">Contraseña</string>
+    <string name="button_login_login">Ingresar</string>
+
+    <!--CommonCode-->
+    <string name="button_dashboard_Pacientes">Pacientes</string>
+    <string name="button_dashboard_Medicos">Médicos</string>
+    <string name="button_dashboard_Enfermedades">Enfermedades</string>
+    <string name="button_dashboard_Citas">Citas</string>
+    <string name="button_dashboard_logout">Cerrar sesión</string>
+    <string name="text_dashboard_title1">Control de</string>
+    <string name="text_dashboard_title2">expedientes</string>
+
+    <!--FORM-->
+    <string name="text_form_complete_name">Nombre completo</string>
+    <string name="text_form_ced_number">Número de cédula</string>
+    <string name="text_form_nacionality">Nacionalidad</string>
+    <string name="text_form_activo">Estado</string>
+    <string name="text_form_email">Correo electrónico</string>
+    <string name="text_form_birthday_date">Fecha de nacimiento</string>
+    <string name="text_form_mails_list">Correo electrónico</string>
+    <string name="text_form_numbers_list">Número telefónico</string>
+    <string name="text_form_addresses_list">Dirección de habitación</string>
+    <string name="text_form_diseases_list">Enfermedades que padece</string>
+    <string name="text_form_gender">Sexo</string>
+    <string name="text_form_death">Fecha de fallecimiento</string>
+    <string name="button_form_registrar">Registrar</string>
+    <string name="button_form_editar">Editar</string>
+    <string name="button_form_editar_terminar">Finalizar edición</string>
+    <string name="text_form_code_school">Código (colegio de médicos)</string>
+    <string name="text_RegistrarMedico_user_data">Datos del ingreso al sistema</string>
+    <string name="text_form_clic">Clic para escribir</string>
+
+    <string name="text_editar_indicar">(No introducir valores si no desea cambiar.)</string>
+
+    <!--TÍTULOS-->
+    <!--Registrar Paciente-->
+    <string name="text_RegistrarPaciente_title">Registrar paciente</string>
+    <!--Registrar médico-->
+    <string name="text_RegistrarMedico_title">Registrar médico</string>
+    <string name="text_EditarMedico_title">Editar médico</string>
+    <string name="text_Pacientes_list">Lista de pacientes</string>
+    <string name="text_Pacientes_title">Vista de pacientes</string>
+    <string name="text_PacientesBuscar_title">Buscador de pacientes</string>
+    <string name="text_PacientesVista_title">Perfil del paciente</string>
+    <string name="text_MedicosVista_title">Perfil del médico</string>
+
+    <!--BOTONES-->
+    <string name="button_nuevo">Nuevo</string>
+    <string name="button_editar">Editar</string>
+    <string name="button_eliminar">Eliminar</string>
+    <string name="button_registrar">Registrar</string>
+    <string name="button_finalizar">Finalizar</string>
+    <string name="button_buscar">Buscar</string>
+
+    <!--DEFAULT-->
+    <string name="text_password">Contraseña</string>
+    <string name="text_password_6">Contraseña (6 carácteres mínimos)</string>
+    <string name="text_confirm_password">Confirmar contraseña</string>
+
+    <string name="button_RegistrarPaciente_registrar">Registrar</string>
+
+    <!--PACIENTES-->
+    <string-array name="sex">
+        <item>Femenino</item>
+        <item>Masculino</item>
+    </string-array>
+    <string name="text_PacientesEditar_title">Editar un paciente</string>
+
+    <!--MÉDICOS-->
+    <string name="text_MedicosBuscar_title">Buscar un médico</string>
+    <string name="edit_MedicosBuscar_buscador_hint">Clic para escribir</string>
+    <string name="text_Medicos_list">Lista de médicos</string>
+
+    <!--CITAS-->
+    <string name="text_Citas_list">Lista de citas</string>
+    <string name="text_CitasBuscar_title">Buscar paciente al que desea agregar una cita</string>
+    <string name="text_CitasNuevo2_title">Agregar nueva cita</string>
+    <string name="text_CitasNuevo2_Paciente">Paciente</string>
+    <string name="text_CitasNuevo2_Medico">Médico</string>
+
+    <!--ENFERMEDADES-->
+    <string name="text_Enfermedades_list">Lista de enfermedades</string>
+    <string name="text_Enfermedad">Enfermedad</string>
+    <string name="text_RegistrarEnfermedad_title">Agregar una enfermedad</string>
+    <string name="text_EditarEnfermedad_title">Editar una enfermedad</string>
+    <string name="text_EnfermedadesRegistrar_code">Código de la enfermedad</string>
+    <string name="text_EnfermedadesRegistrar_code_answer">Respuesta del código de la enfermedad</string>
+    <string name="text_EnfermedadesRegistrar_description">Descripción de la enfermedad</string>
+    <string name="text_EnfermedadesRegistrar_description_answer">Respuesta de descripción</string>
+    <string name="title_activity_ingresar">Sign in</string>
+    <string name="country_prompt">Countries</string>
+    <string-array name="country_arrays">
+        <item>Malaysia</item>
+        <item>United States</item>
+        <item>Indonesia</item>
+        <item>France</item>
+        <item>Italy</item>
+        <item>Singapore</item>
+        <item>New Zealand</item>
+        <item>India</item>
+    </string-array>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Correo</string>
+    <string name="prompt_password">Contraseña</string>
+    <string name="action_sign_in">Iniciar sesión</string>
+    <string name="action_sign_in_short">Iniciar sesión</string>
+    <string name="error_invalid_email">Correo inválido</string>
+    <string name="error_invalid_password">Contraseña es muy corta</string>
+    <string name="error_incorrect_password">Contraseña incorrecta</string>
+    <string name="error_field_required">Este campo es requerido</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="title_activity_logingvgvg">Iniciar sesión</string>
+    <string name="title_activity_login">Ingresar</string>
+
+    <!-- Observaciones -->
+    <string name="text_Observaciones_list">Observaciones</string>
+    <string name="text_Observacion">Observación</string>
+    <string name="text_RegistrarObservacion_title">Agregar una observación</string>
+    <string name="text_EditarObservacion_title">Editar observación</string>
+    <string name="text_Observaciones_medico">Médico</string>
+    <string name="text_Observaciones_paciente">Paciente</string>
+    <string name="text_ObservacioensRegistrar_description">Descripción de la observación</string>
+    <string name="button_observaciones">Observaciones</string>
+
+</resources>
+

@@ -1,0 +1,58 @@
+<% if medico_signed_in? %>
+  <p id="notice"><%= notice %></p>
+  
+  <span class="image right">
+    <%= link_to 'Regresar', :back, :class => "button small icon fa-arrow-left" %>
+  </span>
+           
+  <h1>Lista de médicos</h1>
+
+    
+    <div class="row">
+        
+          <div class="4u 12u(small)">
+             <%= link_to 'Nuevo', new_medico_registration_path, :class => "button special small fit icon fa-user-md" %>
+             
+          </div> 
+          <div class="4u 12u(small)">
+            <%= link_to 'Buscar', buscarmedico_index_path, :class=> "button special small fit icon fa-search" %>
+          </div>
+          
+          <div class="4u$ 12u$(small)">
+             <%= link_to 'Editar médico actual', edit_medico_registration_path, :class => "button special small fit icon fa-edit" %>
+          </div> 
+      
+    </div> 
+    
+  <hr/>
+  
+ 
+<div class="table-wrapper">
+ <table class="alt">
+    <thead>
+      <tr>
+        <th>Código</th>
+        <th>Cédula</th>
+        <th>Nombre</th>
+        <th colspan="2"></th> 
+      </tr>
+    </thead>
+  
+    <tbody>
+      <% @medicos.each do |medico| %>
+        <tr>
+          <td><%= medico.codigo %></td>
+          <td><%= medico.cedula %></td>
+          <td><%= medico.nombre %><%= " " %><%= medico.apellido1 %><%= " " %><%= medico.apellido2 %></td>
+          <td><%= link_to 'Mostrar', medico, :class => "button small fit icon fa-user" %></td>
+          <td><%= link_to 'Editar', edit_medico_path(medico), :class => "button small fit icon fa-edit" %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>
+  
+  <br>
+  <%= will_paginate @medicos, renderer: BootstrapPagination::Rails %>
+  
+<% end %>

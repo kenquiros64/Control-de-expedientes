@@ -1,0 +1,5 @@
+<% if @email.destroyed? %>
+  $('ul#email_<%= @email.id %>').fadeOut();
+<% else %>
+  #Do something
+<% end %>

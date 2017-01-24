@@ -1,0 +1,2 @@
+module PacienteCitaObservacionsHelper
+end

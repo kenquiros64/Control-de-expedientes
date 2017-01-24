@@ -1,0 +1,2 @@
+module BuscarmedicoHelper
+end

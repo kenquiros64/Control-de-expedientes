@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_pacientes_inicio"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.example.ediloaz.control07.Pacientes.ActivityPacientesInicio">
+
+    <include layout="@layout/dashboard"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
+            <!--Espacio en el top-->
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="50dp" />
+
+            <!--Título LISTA DE PACIENTES y botones NUEVO y BUSCAR-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="left|center_vertical"
+                    >
+
+                    <TextView
+                        android:id="@+id/text_Pacientes_list"
+                        android:textColor="#1F1815"
+                        android:text="@string/text_Pacientes_list"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="24sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="right|center_vertical">
+
+                    <!--Nuevo-->
+                    <Button
+                        android:id="@+id/button_Pacientes_Nuevo"
+                        android:background="@drawable/button_blue"
+                        android:textColor="#FFFFFF"
+                        android:text="@string/button_nuevo"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:textAllCaps="false"
+                        android:fontFamily="sans-serif"
+                        android:textSize="18sp"
+                        android:layout_marginRight="20dp"/>
+
+                    <!--Buscar-->
+                    <Button
+                        android:id="@+id/button_Pacientes_Buscar"
+                        android:background="@drawable/button_blue"
+                        android:textColor="#FFFFFF"
+                        android:text="@string/button_buscar"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:textAllCaps="false"
+                        android:fontFamily="sans-serif"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="#1F1815"/>
+
+
+            <TableLayout
+                android:id="@+id/table_Pacientes_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:text="Cédula"
+                        android:textColor="#1F1815"
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textAlignment="center" />
+                    <TextView
+                        android:text="Nombre"
+                        android:textColor="#1F1815"
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:textAlignment="center"/>
+                    <TextView
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/text_PacientesInicio_mostrar" />
+                    <TextView
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:id="@+id/text_PacientesInicio_editar" />
+                </TableRow>
+
+            </TableLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <ProgressBar
+                style="?android:attr/progressBarStyleLarge"
+                android:progressDrawable="@drawable/circular_progress_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/progressBar"/>
+
+        </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,7 @@
+<% @pacientes.each do |paciente| %>
+<tr>
+    <td><%= paciente.cedula %></td>
+    <td><%= paciente.nombre %><%= " " %><%= paciente.apellido1 %><%= " " %><%= paciente.apellido2 %></td>
+    <td><%= link_to 'Agregar cita', paciente_cita_path(paciente), :class => "button special small fit icon fa-plus" %></td>
+</tr>
+<% end %>

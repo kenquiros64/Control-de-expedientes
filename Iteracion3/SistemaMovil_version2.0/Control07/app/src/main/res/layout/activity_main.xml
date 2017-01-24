@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.ediloaz.control07.MainActivity"
+    android:gravity="center_vertical|center_horizontal"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="30dp"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/login_user"/>
+            <TextView
+                android:id="@+id/text_login_tittle"
+                android:text="@string/text_login_tittle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="28sp" />
+        </LinearLayout>
+        <TextView
+            android:id="@+id/text_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/activity_horizontal_margin"
+            android:text="@string/text_login_user"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/login_user"/>
+            <EditText
+                android:id="@+id/edit_user"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/activity_horizontal_margin"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/text_pass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/activity_horizontal_margin"
+            android:text="@string/text_login_pass"
+            android:textSize="18sp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/login_pass"/>
+            <EditText
+                android:id="@+id/edit_pass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/activity_horizontal_margin"
+                android:textSize="18sp"/>
+        </LinearLayout>
+        <Button
+            android:id="@+id/button_login"
+            android:text="@string/button_login_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:fontFamily="sans-serif"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+
+</LinearLayout>
+
+
+<!--Cosas que faltan-->
+    <!--Agregar borde al EditText-->
+    <!--Cambiar las imagenes-->

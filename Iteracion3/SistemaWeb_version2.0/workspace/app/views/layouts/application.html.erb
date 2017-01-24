@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Control de expedientes</title>
+	  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	  <%= stylesheet_link_tag    'main'%>
+	  <%= javascript_include_tag 'main'%>
+	  <%= javascript_include_tag 'util'%>
+	  <%= javascript_include_tag 'pacientes'%>
+	  
+	  <script type="text/javascript">
+		$(document).ready(function(){
+		  $('[data-behaviour=datepicker]').datepicker({format: 'dd-mm-yyyy'});
+		});
+	</script>
+  
+		
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <%= csrf_meta_tags %>
+</head>
+
+<body id="top">
+
+		<!-- Header -->
+			<header id="header">
+			    <% if medico_signed_in? %>
+			    <h5>
+				    <% if !current_medico.has_role? :admin %>
+				        Dr. 
+				    <% end %>
+				      <%= " " %> <%= current_medico.nombre %><%= " " %><%= current_medico.apellido1 %><%= " " %><%= current_medico.apellido2 %>
+			    
+			    </h5>
+			    <% end %>
+				<nav>
+					<a href="/"><h2 class="icon fa-list"><%= " " %>Control de expedientes</h2></a>
+					
+					<ul class="actions vertical">
+						<% if medico_signed_in? %>
+							<li><%= link_to 'Pacientes', pacientes_path, :class=> "button special fit icon fa-user-plus" %></li>
+							<% if current_medico.has_role? :admin %>
+								<li><%= link_to 'Médicos', medicos_path, :class=> "button special fit icon fa-user-md" %></li>
+								<li><%= link_to 'Enfermedades', enfermedads_path, :class=> "button special fit icon fa-ambulance" %></li>
+							<% end %>
+							<li><%= link_to 'Citas', cita_path, :class=> "button special fit icon fa-file-text-o" %></li>
+							
+							  <li>
+							  <%= link_to('Cerrar sesión', destroy_medico_session_path, :method => :delete, :class => "button fit icon fa-sign-out") %>        
+							  </li>
+					    <% else %>
+					    	<li>
+							  <%= link_to 'Iniciar sesión',new_medico_session_path, :class => "button special fit icon fa-sign-out" %>        
+							</li>
+						<% end %>
+					</ul>
+				</nav>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+				<%=yield%>
+			</div>
+
+	</body>
+</html>
+

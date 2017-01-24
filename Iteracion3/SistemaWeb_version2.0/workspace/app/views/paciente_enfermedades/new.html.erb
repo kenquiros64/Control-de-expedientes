@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<span class="image right">
+    <%= link_to 'Regresar', paciente_enfermedads_path(@paciente), :class => "button small icon fa-arrow-left" %>
+</span>
+
+<h1>Agregar enfermedad</h1>
+
+<hr/>
+
+ <h2>Paciente:<%= " " %> <%= @paciente.nombre %><%= " " %><%= @paciente.apellido1 %><%= " " %><%= @paciente.apellido2 %></h2>
+
+<%= render 'form' %>
+
+

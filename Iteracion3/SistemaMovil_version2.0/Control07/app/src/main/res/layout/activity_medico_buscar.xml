@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_medico_buscar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.example.ediloaz.control07.Medicos.ActivityMedicosBuscar">
+
+    <include layout="@layout/dashboard"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
+            <!--Espacio en el top-->
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="50dp" />
+            <TextView
+                android:id="@+id/text_MedicoBuscar_title"
+                android:text="@string/text_MedicosBuscar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp" />
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="#737373"/>
+
+            <!--Título LISTA DE PACIENTES y botones NUEVO y BUSCAR-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="left|center_vertical"
+                android:paddingLeft="@dimen/activity_horizontal_margin"
+                android:paddingRight="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="30dp"
+                >
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:gravity="left|center_vertical"
+                    >
+                    <EditText
+                        android:id="@+id/edit_MedicosBuscar_buscador"
+                        android:layout_width="340dp"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"
+                        android:hint="@string/edit_MedicosBuscar_buscador_hint"/>
+
+                    <!--Buscar-->
+                    <Button
+                        android:id="@+id/button_MedicosBuscar_Buscar"
+                        android:background="@drawable/button_blue"
+                        android:textColor="#FFFFFF"
+                        android:text="@string/button_buscar"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:textAllCaps="false"
+                        android:fontFamily="sans-serif"
+                        android:textSize="18sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+            <TableLayout
+                android:id="@+id/table_MedicosBuscar_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:stretchColumns="*">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:text="Código"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView2" />
+
+                    <TextView
+                        android:text="Cédula"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView" />
+
+                    <TextView
+                        android:text="Nombre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/text_EnfermedadesBuscar_mostrar" />
+                    <TextView
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/text_EnfermedadesBuscar_editar" />
+                    <TextView
+                        android:text=""
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/text_EnfermedadesBuscar_eliminar" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center_vertical">
+
+                <ProgressBar
+                    style="?android:attr/progressBarStyleLarge"
+                    android:progressDrawable="@drawable/circular_progress_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:id="@+id/progressBar"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

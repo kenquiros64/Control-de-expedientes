@@ -1,0 +1,59 @@
+
+<p id="notice"><%= notice %></p>
+    
+  <span class="image right">
+    <%= link_to 'Regresar', paciente_cita_path(@paciente), :class => "button small icon fa-arrow-left"%>
+  </span>
+
+    <h1>Detalles de la cita</h1>
+
+    <div class="row">
+        <div class="4u 12u(small)">
+            <%= link_to 'Editar', edit_paciente_citum_path(@paciente, @citum) , :class => "button special small fit icon fa-edit"%>
+        </div>   
+    </div> 
+    
+  <hr/> 
+  
+  <header>
+    <h2>Paciente:</h2>
+    <p> <%= @paciente.nombre %><%= " " %><%= @paciente.apellido1 %><%= " " %><%= @paciente.apellido2 %></p>
+  </header>
+  
+  <header>
+    <h2>Médico encargado:</h2>
+    <p> <%= @citum.medico.nombre %><%= " " %><%= @citum.medico.apellido1 %><%= " " %><%= @citum.medico.apellido2 %></p>
+  </header>
+
+  <header>
+    <h2>Fecha:</h2>
+    <p> <%= @citum.fecha %></p>
+  </header>
+  
+  <header>
+    <h2>Hora:</h2>
+    
+    <p> <%= @citum.hora %></p>
+  </header>
+  
+  <hr/>
+  
+  <div class="row">
+        <div class="8u">
+            <h1>Observaciones</h1>
+        </div> 
+        <div class="4u$">
+            <%= link_to 'Observaciones', paciente_citum_observacions_path(@paciente,@citum), :class => "button small fit special icon fa-file-text-o" %> 
+        </div>   
+    </div> 
+    
+  <hr/>
+
+  <h1>Eliminar cita</h1>    
+  <div class="6u">
+    <%= link_to 'Eliminar', paciente_citum_path(@paciente, @citum), method: :delete, :class => "button special fit icon fa-remove", :style => "background-color:#f56a6a;border-color:#f56a6a;", data: { confirm: 'Desea continuar?' } %>
+  </div>
+  
+  <hr/>
+
+

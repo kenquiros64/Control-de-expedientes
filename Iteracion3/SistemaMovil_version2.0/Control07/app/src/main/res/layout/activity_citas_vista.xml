@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_citas_vista"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.example.ediloaz.control07.Citas.ActivityCitasVista">
+
+    <include layout="@layout/dashboard"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/activity_vertical_margin">
+
+            <!--Espacio en el top-->
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="50dp" />
+
+
+
+            <TextView
+                android:id="@+id/text_CitasVista_title"
+                android:text="Detalles de la cita"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="24sp" />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:background="#737373"/>
+
+            <!--Paciente y médico-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                >
+                <LinearLayout
+                    android:layout_width="337dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/title_CitasVista_Paciente"
+                        android:text="@string/text_CitasNuevo2_Paciente"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/text_CitasVista_Paciente_answer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="337dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:id="@+id/text_CitasVista_Medico"
+                        android:text="@string/text_CitasNuevo2_Medico"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/text_CitasVista_Medico_answer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <!--Fecha y hora-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                >
+                <LinearLayout
+                    android:layout_width="337dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+                    <TextView
+                        android:id="@+id/text_CitasVista_date"
+                        android:text="Fecha"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/text_CitasVista_date_answer"
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="337dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/text_CitasVista_Hora"
+                        android:text="Hora"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp" />
+                    <TextView
+                        android:id="@+id/text_CitasVista_Hora_answer"
+                        android:text=""
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="40dp">
+                <TextView
+                    android:id="@+id/text_Observacions_list"
+                    android:text="@string/text_Observaciones_list"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp" />
+
+                <Button
+                    android:id="@+id/button_CitaObservaciones"
+                    android:background="@drawable/button_blue"
+                    android:textColor="#FFFFFF"
+                    android:text="@string/button_observaciones"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    android:fontFamily="sans-serif"
+                    android:textSize="18sp"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+<span class="image right">
+    <%= link_to 'Regresar', :back, :class => "button small icon fa-arrow-left" %>
+ </span>
+ 
+ <h1>Buscar un paciente</h1>
+ <h3>Paciente al que se desea agregar una cita</h3>
+    
+ <hr/>
+
+<%= form_tag "/buscar_paciente_cita/create", :method => :get, :remote => true do %>
+    
+    <div class="row">
+        <div class="8u 12u(small)">
+            <%= text_field_tag :keyword, nil, :placeholder => "Buscar paciente" %>
+        </div> 
+       <div class="4u$ 12u$(small)">
+            <%= content_tag :button, :type => "submit", :class => "button special small fit icon fa-search" do%>
+                Buscar
+            <%end%>
+        </div>    
+    </div> 
+    
+    <hr/>
+
+    </ul>
+    
+    <div class="table-wrapper">
+     <table class="alt">
+        <thead>
+          <tr>
+            <th>Cédula</th>
+            <th>Nombre</th>
+            <th colspan="1"></th> 
+          </tr>
+        </thead>
+      
+        <tbody class="pacientes">
+        </tbody>
+     </table>
+     
+     
+    </div>
+    
+   
+<% end %>
+
+
+

@@ -1,0 +1,7 @@
+  <div class='nested-fields'>
+      <%= f.label :telefono, 'Teléfono', :style => "display: none;" %>
+      <ul class="actions fit">
+        <li><%= f.text_field :telefono, :placeholder => "Teléfono 0000-0000"%></li>
+        <li><%= link_to_remove_association "Eliminar", f, :class => "button special small fit icon fa-remove", :style => "background-color:#f56a6a;border-color:#f56a6a;" %></li>
+      <ul>
+  </div>

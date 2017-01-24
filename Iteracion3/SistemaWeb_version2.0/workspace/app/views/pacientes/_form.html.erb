@@ -1,0 +1,126 @@
+
+<%= form_for @paciente, html: { multipart: true } do |f| %>
+  <% if @paciente.errors.any? %>
+    <section id="one">
+      <div class="8u 12u$(small)" id="error_explanation">
+        <h2>Error en los siguientes campos</h2>
+        <ol>
+        <% @paciente.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ol>
+      </div>
+    </section>
+  <% end %>
+  <section id="one">
+    <div class="row">
+      <div class="4u">
+        <span class="image fit"><img src="/assets/icon-user-default.png" alt=""></span>
+      </div> 
+      <div class="8u">
+        <div class="field">
+          <%= f.label :nombre, 'Nombre' %>
+          <%= f.text_field :nombre, :placeholder => "Nombre", :autofocus  => true %>
+        </div>
+        <div class="row">
+          <div class="6u">
+            <div class="field">
+              <%= f.text_field :apellido1, :placeholder => "Primer apellido" %>
+            </div>
+          </div>
+          <div class="6u$">
+            <div class="field">
+              <%= f.text_field :apellido2, :placeholder => "Segundo apellido"  %>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="6u">
+            <div class="field">
+              <%= f.label :cedula ,'Cédula'%>
+              <%= f.text_field :cedula, :placeholder => "Cédula 0-0000-0000" %>
+            </div>
+          </div>
+          <div class="6u$">
+            <div class="field">
+              <%= f.label :sexo, 'Sexo' %>
+              <%= f.select :sexo, [ 'Masculino', 'Femenino' ], :prompt => 'Sexo', :id => "demo-category" %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br/>
+    
+    <div class="field">
+      <h3>Imagen de paciente</h3>
+      <%= f.file_field :image%> 
+    </div>
+    
+    <div class="field">
+      <%= f.label :nacionalidad , 'Nacionalidad'%>
+      <%= f.select :nacionalidad, [ 'Costarricense','Costarricense naturalizado', 'Extranjero' ], :prompt => 'Nacionalidad', :id => "demo-category" %>
+    </div>
+    
+    
+    <div class="row">
+      <div class="6u">
+        <div class="field">
+          <%= f.label :fechaNacimiento, 'Fecha de nacimiento'%>
+          <%= f.text_field :fechaNacimiento,:class => "datepicker", :data => {:provide => "datepicker"}, :placeholder => "00/00/0000", 'data-behaviour' => 'datepicker' %>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  
+  <hr/>
+  <h3>Agregar un nuevo teléfono</h3>
+  <h5>Los campos son agregados al presionar el botón de registrar o editar</h5>
+
+  <section id="two">
+      <div class="field">
+        <div id="telefonos">
+          <%= f.fields_for :telefonos do |telefono| %>
+            <%= render 'telefonos_fields', :f => telefono %>
+          <% end %>
+        </div>
+      </div> 
+      <%= link_to_add_association "Agregar", f, :telefonos, :partial => 'telefonos_fields',:class => 'button special small icon fa-plus'%>
+  </section>
+    <hr/>
+    
+    <h3>Agregar un nuevo correo</h3>
+    <h5>Los campos son agregados al presionar el botón de registrar o editar.</h5>
+  
+    <section id="two">
+      <div class="field">
+        <div id="emails">
+          <%= f.fields_for :emails do |email| %>
+            <%= render 'emails_fields', :f => email %>
+          <% end %>
+        </div>
+      </div>
+      <%= link_to_add_association "Agregar", f, :emails, :partial => 'emails_fields',:class => 'button special small icon fa-plus'%>
+  </section>
+  
+  <hr/>
+    <section id="two">
+      <div class="6u$">
+        <div class="field">
+          <%= f.label :fechaFallecimiento, 'Fecha de fallecimiento' %>
+          <%= f.text_field :fechaFallecimiento, :data => {:provide => "datepicker"}%>
+        </div>
+      </div>
+    </section>
+  <hr/>
+  <section id="three">
+    <div class="actions">
+      <% if @paciente.new_record? %>
+        <%= f.submit "Registrar", :class => "button special" %>
+      <% else %>
+        <%= f.submit "Editar", :class => "button special" %>
+      <% end %>
+    </div> 
+  </section>
+<% end %>

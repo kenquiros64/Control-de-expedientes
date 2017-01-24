@@ -1,0 +1,30 @@
+<%= form_for(@enfermedad) do |f| %>
+  <% if @enfermedad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@enfermedad.errors.count, "error") %> error al ingresar:</h2>
+
+      <ul>
+      <% @enfermedad.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :codigo, "Código"%>
+    <%= f.text_field :codigo, :placeholder => "Código" %>
+  </div>
+  <div class="field">
+    <%= f.label :descripcion, "Descripción" %>
+    <%= f.text_field :descripcion, :placeholder => "Descripción" %>
+  </div>
+  <hr/>
+  <div class="actions">
+    <% if @enfermedad.new_record? %>
+        <%= f.submit "Registrar", :class => "button special" %>
+      <% else %>
+        <%= f.submit "Editar", :class => "button special" %>
+      <% end %>
+  </div>
+<% end %>

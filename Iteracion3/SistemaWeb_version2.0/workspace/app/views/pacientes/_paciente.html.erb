@@ -1,0 +1,8 @@
+
+<tr>
+    <td><%= paciente.cedula %></td>
+    <td><%= paciente.nombre %><%= " " %><%= paciente.apellido1 %><%= " " %><%= paciente.apellido2 %></td>
+    <td><%= link_to 'Mostrar',  paciente, :class => "button small fit icon fa-file-text-o" %></td>
+    <td><%= link_to 'Editar', edit_paciente_path(paciente), :class => "button small fit icon fa-edit" %></td>
+    <td><%= link_to 'Eliminar', paciente, method: :delete, :class => "button small fit icon fa-remove", data: { confirm: 'Desea continuar?' } %></td>
+</tr>

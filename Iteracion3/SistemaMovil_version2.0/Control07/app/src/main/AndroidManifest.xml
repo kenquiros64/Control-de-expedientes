@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ediloaz.control07">
+
+    <!-- To auto-complete the email text field in the login form with the user's emails -->
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:screenOrientation="landscape"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ActivityWelcome"
+            android:label="ActivityWelcome"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <!-- PACIENTES -->
+        <activity
+            android:name=".Pacientes.ActivityPacientesNuevo"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Medicos.ActivityMedicosNuevo"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Pacientes.ActivityPacientesInicio"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Pacientes.ActivityPacientesBuscar"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Pacientes.ActivityPacientesVista"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Medicos.ActivityMedicosVista"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Medicos.ActivityMedicosInicio"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Medicos.ActivityMedicosEditar"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Medicos.ActivityMedicosBuscar"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Enfermedades.ActivityEnfermedadesInicio"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Enfermedades.ActivityEnfermedadesNuevo"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Enfermedades.ActivityEnfermedadesEditar"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Enfermedades.ActivityEnfermedadesBuscar"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Enfermedades.ActivityEnfermedadesVista"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ActivityIngresar"
+            android:label="@string/title_activity_ingresar"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ActivityLogin"
+            android:label="@string/title_activity_login"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ActivityEmpty" />
+        <activity
+            android:name=".Citas.ActivityCitasInicio"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Citas.ActivityCitasNuevo"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Citas.ActivityCitasNuevo2"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Citas.ActivityCitasEditar"
+            android:screenOrientation="landscape" />
+        <activity android:name=".Pacientes.ActivityPacientesEditar"
+            android:screenOrientation="landscape" />
+        <activity android:name=".Citas.ActivityCitasVista"
+            android:screenOrientation="landscape" />
+        <activity android:name=".Citas.ActivityCitasListadoPaciente"
+            android:screenOrientation="landscape" ></activity>
+
+        <activity android:name=".Observaciones.Pacientes.ActivityPacienteObservacionesInicio"
+            android:screenOrientation="landscape" />
+        <activity android:name=".Observaciones.Pacientes.ActivityPacienteObservacionesNuevo"
+            android:screenOrientation="landscape" />
+        <activity android:name=".Observaciones.Pacientes.ActivityPacienteObservacionMostrar"
+            android:screenOrientation="landscape" />
+        <activity android:name=".Observaciones.Pacientes.ActivityPacienteObservacionEditar"
+            android:screenOrientation="landscape" />
+        <activity android:name=".Observaciones.Citas.ActivityCitaObservacionEditar"
+            android:screenOrientation="landscape" />
+        <activity android:name=".Observaciones.Citas.ActivityCitaObservacionesInicio"
+            android:screenOrientation="landscape" />
+        <activity android:name=".Observaciones.Citas.ActivityCitaObservacionesNuevo"
+            android:screenOrientation="landscape" />
+        <activity android:name=".Observaciones.Citas.ActivityCitaObservacionMostrar"
+            android:screenOrientation="landscape"></activity>
+    </application>
+
+</manifest>
